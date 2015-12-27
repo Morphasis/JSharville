@@ -1,0 +1,68 @@
+$j-blue: #1CA8DD;
+$j-green: #1BC98E;
+$j-red: #E64759;
+$j-purple: #9F86FF;
+$j-yelow: #E4D836;
+$j-grey: #5c6274;
+$j-body: #252830;
+
+//^^ delete these
+body{
+  background-color: $j-body;
+  margin-top: 50px;
+}
+// hr line
+hr{
+  border-color: $j-grey;
+}
+.btn-primary{
+  border-radius: 4px;
+  background-color: $j-body;
+  border-color: $j-blue;
+  color: $j-blue;
+  &:hover{
+    color: $j-body;
+    background-color: $j-blue;
+  }
+}
+.btn-danger{
+  border-radius: 4px;
+  background-color: $j-body;
+  border-color: $j-red;
+  color: $j-red;
+  &:hover{
+    color: $j-body;
+    background-color: $j-red;
+  }
+}
+.nav-jacksharville{
+  color: $j-grey;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  font: 400 28px/1.3 'Oleo Script', Helvetica, sans-serif;
+  color: $j-grey;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+.nav-pills > li > a {
+  background-color: $j-body;
+  border-radius: 5px;
+  padding: 7px 15px;
+  color: white;
+  font-size: 13px;
+  &:hover{
+    background-color: #444957;
+  }
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: $j-blue;
+    border-radius: 4px;
+    color: $j-body;
+}
+.form-control{
+  margin-bottom: 25px;
+  border-radius: 4px;
+  background-color: $j-grey;
+  border-color: $j-body;
+  color: white;
+}

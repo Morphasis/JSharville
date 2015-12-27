@@ -1,0 +1,36 @@
+<div ng-controller="PostController">
+  <div class="col-sm-8 col-md-9">
+    <h4>Main</h4>
+    <h1>Admin</h1>
+    <hr>
+  </div>
+  <div class="col-sm-8 col-md-9 project-box">
+    <h1>Update Project {{curproj}}</h1>
+    <input type="text" class="form-control" ng-model="project" placeholder="enter current project"></input>
+    <button class="btn btn-primary col-md-5 col-xs-12 pull-right" ng-click="currentproject()">
+      Update Current Project
+    </button>
+    <button class="btn btn-danger col-md-2 col-xs-12" ng-click="clearproj()">Clear Project</button>
+  </div>
+  <div class="col-sm-8 col-md-9 project-box">
+    <hr>
+    <h1>Enter your post</h1>
+    <input type="text" ng-model="header" class="form-control" placeholder="Header"></input><br>
+    <textarea type="text" class="form-control" rows="3" ng-model="content" placeholder="Content"></textarea><br>
+    <button class="btn btn-primary col-md-5 col-xs-12 pull-right" ng-click="addpost()">Submit</button>
+    <h3>Preview:</h3>
+    <div class="post">
+      <h2>{{header}}</h2>
+      <h4>{{content}}</h4>
+    </div>
+  </div>
+  <div class="col-sm-8 col-md-9 project-box pull-right">
+    <hr>
+    <h1>Saved Posts</h1>
+    <button class="btn btn-danger pull-right col-md-5 col-xs-12" ng-click="clearposts()">Clear Posts</button>
+    <div ng-repeat="post in posts track by $index" class="post">
+      <h2>{{post.header}}</h2>
+      <h4>{{post.content}}</h4>
+    </div>
+  </div>
+</div>
