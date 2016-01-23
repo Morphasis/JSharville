@@ -1,10 +1,17 @@
 <div ng-controller="PostController">
+  <h1>this is the test controller</h1>
+  <button ng-click="tabAdd()" class="btn btn-primary">Add</button>
+  <button ng-click="tabsub()" class="btn btn-primary">Sub</button>
+</div>
+
+<div ng-controller="PostController">
   <div class="col-sm-8 col-md-9">
     <h4>Main</h4>
     <h1>Admin</h1>
     <hr>
   </div>
   <div class="col-sm-8 col-md-9 project-box">
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-primary pull-right") %><br>
     <h1>Update Project {{curproj}}</h1>
     <input type="text" class="form-control" ng-model="project" placeholder="enter current project"></input>
     <button class="btn btn-primary col-md-5 col-xs-12 pull-right" ng-click="currentproject()">
@@ -29,7 +36,7 @@
     <h1>Saved Posts</h1>
     <button class="btn btn-danger pull-right col-md-5 col-xs-12" ng-click="clearposts()">Clear Posts</button>
     <div ng-repeat="post in posts track by $index" class="post">
-      <h2>{{post.header}}</h2>
+      <h3>{{post.header}}</h3>
       <h4>{{post.content}}</h4>
     </div>
   </div>
